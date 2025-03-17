@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haiqa Shujayat - CV</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 30px;
+            background-color: var(--light);
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 30px;
+        }
+
+        h1, h2 {
+            color: var(--primary);
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            margin: 25px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--secondary);
+        }
+
+        .sidebar {
+            padding-right: 30px;
+            border-right: 2px solid #eee;
+        }
+
+        .contact {
+            margin-bottom: 30px;
+        }
+
+        .contact div {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 8px 0;
+        }
+
+        .contact a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        li::before {
+            content: "\25B8";
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+        }
+
+        .section {
+            margin-bottom: 30px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .project-item {
+            margin: 20px 0;
+            padding-left: 15px;
+            border-left: 2px solid var(--secondary);
+        }
+
+        @media (max-width: 768px) {
+            body {
+                grid-template-columns: 1fr;
+                padding: 20px;
+                margin: 20px;
+            }
+            
+            .sidebar {
+                padding-right: 0;
+                border-right: none;
+                border-bottom: 2px solid #eee;
+                padding-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h1>HAIQA SHUJAYAT</h1>
+        <h2>Software Engineer</h2>
+        
+        <div class="section">
+            <h2>PROFILE</h2>
+            <p>Enthusiastic and motivated Computer Science student with a keen interest in Artificial Intelligence and Software Development. Demonstrates exceptional problem-solving abilities and a robust proficiency in programming, algorithms, and data structures.</p>
+        </div>
+        
+        <div class="section">
+            <h2>CONTACT</h2>
+            <div class="contact">
+                <div>📞 <span>0332-4457733</span></div>
+                <div>📧 <span>haiqashujayat111@gmail.com</span></div>
+                <div>🏠 <span>Johar Town Lahore</span></div>
+                <div>🔗 <a href="https://github.com/HaiqaShujayat0" target="_blank">github.com/HaiqaShujayat0</a></div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>EXPERTISE</h2>
+            <ul>
+                <li>Front End Development</li>
+                <li>Database Management</li>
+                <li>C/C++ Programming</li>
+                <li>Version Control</li>
+                <li>Machine Learning</li>
+                <li>MS Office Suite</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="section">
+            <h2>EDUCATION</h2>
+            <div class="grid">
+                <div>2022-2026</div>
+                <div>
+                    <strong>BSc Computer Science</strong><br>
+                    Comsats University Islamabad
+                </div>
+                <div>2018-2020</div>
+                <div>
+                    <strong>Intermediate (1024/1100)</strong><br>
+                    KIPS College
+                </div>
+                <div>2016-2018</div>
+                <div>
+                    <strong>Secondary (1064/1100)</strong><br>
+                    Divisional Public School
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>EXTRA CURRICULAR</h2>
+            <div class="grid">
+                <div>2023-2024</div>
+                <div>
+                    <strong>Chief Documentation</strong><br>
+                    IEEE RAS
+                </div>
+                <div>2022</div>
+                <div>
+                    <strong>Deputy Director</strong><br>
+                    IEEE RAS Documentation
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>PROJECTS</h2>
+            <div class="project-item">
+                <h3>MERN E-commerce</h3>
+                <p>Full-stack Petmall clone with database integration</p>
+            </div>
+            <div class="project-item">
+                <h3>Netflix Clone</h3>
+                <p>Frontend replica using HTML/CSS/JavaScript</p>
+            </div>
+            <div class="project-item">
+                <h3>Web Dev Certification</h3>
+                <p>Completed E-Hunnar full-stack course</p>
+            </div>
+            <div class="project-item">
+                <h3>Prison Management System (SQL), Client</h3>
+                <p>Developed a database system for prison records management using SQL for a client project.</p>
+            </div>
+            <div class="project-item">
+                <h3>Spotify Clone (Front-end)</h3>
+                <p>Developed a Spotify-inspired web application using HTML, CSS, and JavaScript to showcase music tracks and playlists.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
