@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Logitech Store - Premium Tech Accessories</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* 
+      Color Palette: I Used in this assignment 
+      #2A2438 (Dark Purple)
+      #352F44 (Dark Purple)
+      #5C5470 (English Violet)
+      #DBD8E3 (Lavender)
+      #F2F1F7 (Ghost White)
+    */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #5C5470; /* English Violet */
+      color: #DBD8E3;           /* Lavender */
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    /* Navigation Bar */
+    .navbar-custom {
+      background: #2A2438; /* Dark Purple */
+    }
+
+    .navbar-custom .navbar-brand,
+    .navbar-custom .nav-link {
+      color: #F2F1F7; /* Ghost White */
+      font-weight: 600;
+    }
+
+    .navbar-custom .nav-link:hover {
+      color: #DBD8E3; /* Lavender */
+    }
+
+    .hero {
+      position: relative; 
+      text-align: center;
+      padding: 120px 20px;
+      overflow: hidden;
+      background: url("https://resource.logitech.com/w_1280,c_limit,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/creators/products-creators.jpg") no-repeat center center/cover;
+    }
+
+    
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; 
+      left: 0;
+      width: 100%; 
+      height: 100%;
+      background: rgba(42, 36, 56, 0.6); /* #2A2438 with 60% opacity */
+      backdrop-filter: blur(3px); 
+      z-index: 0;
+    }
+
+    /* Hero text container */
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      color: #F2F1F7; /* Ghost White */
+    }
+
+    .hero-content h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .hero-content button {
+      padding: 12px 20px;
+      font-size: 18px;
+      background: #FF6F00; /* Accent color */
+      color: #F2F1F7;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .hero-content button:hover {
+      background: #e65c00;
+      transform: scale(1.1);
+    }
+
+
+    .products {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .products h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .product-card {
+      background: #F2F1F7; /* Ghost White for product cards */
+      color: #2A2438;      /* Dark Purple for text */
+      padding: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .product-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s;
+    }
+
+    .product-card img:hover {
+      transform: scale(1.05);
+    }
+
+    .product-card h3 {
+      margin: 10px 0;
+      font-size: 20px;
+    }
+
+    .product-card p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background: #352F44; /* Dark Purple */
+      color: #F2F1F7;      /* Ghost White */
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+
+    footer a {
+      color: #DBD8E3; /* Lavender */
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
+      color: #F2F1F7;
+    }
+  </style>
+</head>
+<body>
+
+
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <a class="navbar-brand" href="#">Logitech Store</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Enhance Your Tech Experience</h2>
+      <p>Explore our latest keyboards, mice, and gaming accessories.</p>
+      <button>Shop Now</button>
+    </div>
+  </section>
+
+ 
+  <section class="products">
+    <div class="container">
+      <h2>Featured Logitech Products</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="product-card">
+            <img src="https://logitech.onlinesalestore.pk/cdn/shop/products/logitech-g331-stereo-gaming-headset-01-logitech-pakistan_medium@2x.jpg?v=1639223730" alt="G331 Stereo Gaming Headset">
+            <h3>G331 Stereo Gaming Headset</h3>
+            <p>$129.99</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="product-card">
+            <img src="https://logitech.onlinesalestore.pk/cdn/shop/files/mx-brio-3qtr-front-left-close-graphite-gallery_medium@2x.png?v=1721989778" alt="MX Brio 4K Webcam">
+            <h3>MX Brio 4K Webcam</h3>
+            <p>$199.99</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="product-card">
+            <img src="https://logitech.onlinesalestore.pk/cdn/shop/files/logitech-g502-hero-gaming-mouse-logitech-pakistan-official_medium@2x.png?v=1695043399" alt="G502 Hero Gaming Mouse">
+            <h3>G502 Hero Gaming Mouse</h3>
+            <p>$79.99</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>
+        Contact us at: 
+        <a href="mailto:support@logitech.com">support@logitech.com</a>
+      </p>
+      <p>
+        Follow us on 
+        <a href="#">Instagram</a> | 
+        <a href="#">Facebook</a>
+      </p>
+    </div>
+  </footer>
+
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
