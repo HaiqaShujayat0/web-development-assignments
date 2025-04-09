@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Logitech Store - Premium Tech Accessories</title>
+
+  <!-- Importing the Montserrat font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ============================
+       Global Styles & Resets
+       ============================ */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #5C5470; /* English Violet */
+      color: #DBD8E3;           /* Lavender */
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.6;
+    }
+    /* Container to center content with a maximum width */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* ============================
+       Navigation Bar
+       ============================ */
+    nav {
+      background-color: #2A2438; /* Dark Purple */
+      padding: 15px 20px;
+    }
+    /* Use flexbox to arrange nav elements */
+    nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    nav .nav-brand {
+      font-size: 24px;
+      font-weight: 600;
+      color: #F2F1F7; /* Ghost White */
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    nav ul li {
+      margin-left: 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #F2F1F7; /* Ghost White */
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #DBD8E3; /* Lavender */
+    }
+
+    /* ============================
+       Hero Section
+       ============================ */
+    .hero {
+      position: relative;
+      text-align: center;
+      padding: 120px 20px;
+      background: url("https://resource.logitech.com/w_1280,c_limit,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/creators/products-creators.jpg") 
+                  no-repeat center center/cover;
+      overflow: hidden;
+    }
+    /* Overlay for darkening and blurring the background image */
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(42, 36, 56, 0.6); /* Dark overlay with 60% opacity */
+      filter: blur(3px);
+      z-index: 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1; /* Ensures this content is above the overlay */
+      color: #F2F1F7; /* Ghost White */
+    }
+    .hero-content h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+    .hero-content p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .hero-content button {
+      padding: 12px 20px;
+      font-size: 18px;
+      background: #FF6F00; /* Accent color */
+      color: #F2F1F7;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .hero-content button:hover {
+      background: #e65c00;
+      transform: scale(1.1);
+    }
+
+    /* ============================
+       Products Section
+       ============================ */
+    .products {
+      text-align: center;
+      padding: 50px 20px;
+    }
+    .products h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    /* Flex container for product cards */
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .product-card {
+      background: #F2F1F7; /* Ghost White for cards */
+      color: #2A2438;      /* Dark Purple for text */
+      padding: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+      flex: 1;         /* Allows flexibility */
+      min-width: 280px; /* Ensures the card doesn't get too narrow */
+      max-width: 32%;   /* Three cards per row on larger screens */
+    }
+    .product-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+    .product-card img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s;
+    }
+    .product-card img:hover {
+      transform: scale(1.05);
+    }
+    .product-card h3 {
+      margin: 10px 0;
+      font-size: 20px;
+    }
+    .product-card p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background: #352F44; /* Dark Purple */
+      color: #F2F1F7;      /* Ghost White */
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+    footer a {
+      color: #DBD8E3; /* Lavender */
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    footer a:hover {
+      color: #F2F1F7;
+    }
+
+    /* ============================
+       Responsive Adjustments
+       ============================ */
+    @media (max-width: 768px) {
+      .product-card {
+        max-width: 48%;
+      }
+    }
+    @media (max-width: 480px) {
+      .product-card {
+        max-width: 100%;
+      }
+      /* Stack navigation vertically on very small screens */
+      nav .container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+      }
+      nav ul li {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="container">
+      <span class="nav-brand">Logitech Store</span>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content container">
+      <h2>Enhance Your Tech Experience</h2>
+      <p>Explore our latest keyboards, mice, and gaming accessories.</p>
+      <button>Shop Now</button>
+    </div>
+  </section>
+  
+  <!-- Products Section -->
+  <section class="products">
+    <div class="container">
+      <h2>Featured Logitech Products</h2>
+      <div class="product-list">
+        <div class="product-card">
+          <img src="https://logitech.onlinesalestore.pk/cdn/shop/products/logitech-g331-stereo-gaming-headset-01-logitech-pakistan_medium@2x.jpg?v=1639223730" alt="G331 Stereo Gaming Headset">
+          <h3>G331 Stereo Gaming Headset</h3>
+          <p>$129.99</p>
+        </div>
+        <div class="product-card">
+          <img src="https://logitech.onlinesalestore.pk/cdn/shop/files/mx-brio-3qtr-front-left-close-graphite-gallery_medium@2x.png?v=1721989778" alt="MX Brio 4K Webcam">
+          <h3>MX Brio 4K Webcam</h3>
+          <p>$199.99</p>
+        </div>
+        <div class="product-card">
+          <img src="https://logitech.onlinesalestore.pk/cdn/shop/files/logitech-g502-hero-gaming-mouse-logitech-pakistan-official_medium@2x.png?v=1695043399" alt="G502 Hero Gaming Mouse">
+          <h3>G502 Hero Gaming Mouse</h3>
+          <p>$79.99</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>
+        Contact us at: 
+        <a href="mailto:support@logitech.com">support@logitech.com</a>
+      </p>
+      <p>
+        Follow us on 
+        <a href="#">Instagram</a> | 
+        <a href="#">Facebook</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
